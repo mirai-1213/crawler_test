@@ -4,7 +4,7 @@ import img_op
 
 
 # URL = "http://www.win4000.com/meitu.html"
-URL = "https://mdpr.jp/news/detail/1720270"
+URL = "https://twitter.com/seina_fuku48"
 """
 # URL = "https://www.baidu.com/s?wd="
 # params = input("请输入你想要查找的内容:")

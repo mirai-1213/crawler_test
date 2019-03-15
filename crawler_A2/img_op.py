@@ -39,10 +39,11 @@ def file_name_jpg(HTMLText, url):
     #imglist = soup.find_all(attrs={"class":"pic"})
     imglist = soup.find_all(name="img")
     for i in imglist:
-        # print(i.get("src"))
+        #print(i.get("src"))
         img_url_list.append(i.get("src"))
     # 转集合去重
     img_url_list = list(set(img_url_list))
+    img_url_list = list(filter(None, img_url_list))   
     # 反反爬：以故意缺失http和网站主名的形式反爬，对这部分进行补充
     for i in img_url_list:
         if i.find("http") == -1:
@@ -97,12 +98,4 @@ if __name__ =="__main__":
     with open("./web/000000070.000024101.html","r",encoding='utf-8') as fp:
         HTMLText = fp.read()
     zip_list = file_name_jpg(HTMLText, url)
-    print("----------------")
-    for i,j in list(zip_list):
-        print(i,j)
-    print("---*********----")
-    for i,j in list(zip_list):
-        print(j)
-    print("================")
-    print(list(zip_list))
-        
+
